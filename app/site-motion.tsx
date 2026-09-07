@@ -153,74 +153,9 @@ export default function SiteMotion() {
         .from(".innoshima-lead", { autoAlpha: 0, y: 20, duration: 0.55 }, "-=0.3")
         .from(".innoshima-cta", { autoAlpha: 0, y: 16, duration: 0.45 }, "-=0.2");
 
-      gsap.from(".concept-text-center", {
-        autoAlpha: 0,
-        x: 42,
-        duration: 0.9,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".section-concept-v2", start: "top 72%", once: true },
-      });
-
-      gsap.from(".pilates-header, .pilates-content__text", {
-        autoAlpha: 0,
-        x: -40,
-        stagger: 0.16,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".section-pilates", start: "top 76%", once: true },
-      });
-      gsap.from(".pilates-content__image", {
-        autoAlpha: 0,
-        x: 54,
-        clipPath: "inset(0 0 0 100% round 50%)",
-        duration: 1,
-        ease: "power3.inOut",
-        scrollTrigger: { trigger: ".pilates-content", start: "top 78%", once: true },
-      });
-
-      gsap.utils.toArray<HTMLElement>(".about-block").forEach((block, index) => {
-        const image = block.querySelector(".block__image");
-        const copy = block.querySelector(".block__text");
-        const direction = index % 2 === 0 ? -1 : 1;
-        const timeline = gsap.timeline({
-          scrollTrigger: { trigger: block, start: "top 80%", once: true },
-        });
-        if (image) {
-          timeline.from(image, {
-            autoAlpha: 0,
-            x: 54 * direction,
-            clipPath: direction < 0 ? "inset(0 100% 0 0)" : "inset(0 0 0 100%)",
-            duration: 0.9,
-            ease: "power3.inOut",
-          });
-        }
-        if (copy) {
-          timeline.from(copy, { autoAlpha: 0, x: -28 * direction, duration: 0.65 }, "-=0.42");
-        }
-      });
-
-      gsap.from(".location-content__inner > *", {
-        autoAlpha: 0,
-        y: 24,
-        stagger: 0.1,
-        duration: 0.65,
-        ease: "power2.out",
-        scrollTrigger: { trigger: ".section-location", start: "top 72%", once: true },
-      });
-
-      const desktopMotion = gsap.matchMedia();
-      desktopMotion.add("(min-width: 769px)", () => {
-        gsap.to(".section-location .location-overlay", {
-          scale: 1.07,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".section-location",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.8,
-          },
-        });
-      });
+      // The imported legacy sections keep their layout visible at all times.
+      // Animating their layout containers caused conflicts with the original
+      // parallax CSS when users scrolled quickly.
     }, root);
 
     return () => {
