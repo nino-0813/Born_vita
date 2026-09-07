@@ -26,21 +26,6 @@ function getReferenceBody() {
       <h1 id="innoshima-title">何歳からでも、<br><span>身体は整え直せる。</span></h1>
       <p class="innoshima-lead">肩こり・腰痛・姿勢の悩みに寄り添う、<br>因島の女性のための少人数ピラティス。</p>
       <a class="innoshima-cta" href="#about">はじめての体験レッスン <span>→</span></a>
-    </section>
-    <section class="innoshima-needs" aria-labelledby="needs-title">
-      <div class="innoshima-section-heading">
-        <span>For your body</span>
-        <h2 id="needs-title">こんなお悩みはありませんか？</h2>
-      </div>
-      <ul>
-        <li>仕事や家事で、首・肩・腰がつらい</li>
-        <li>昔よりお腹や背中の体型が気になる</li>
-        <li>整体に行っても、楽なのは一時的</li>
-        <li>激しい運動や大人数のジムは苦手</li>
-        <li>将来、足腰が弱ることが不安</li>
-        <li>自分に合う運動を丁寧に教えてほしい</li>
-      </ul>
-      <p class="innoshima-message">福山や尾道まで行かなくても、島の中で。<br><b>これからも元気に働き、遊び、旅行できる身体</b>を一緒につくります。</p>
     </section>`;
 
   return cleaned

@@ -55,8 +55,7 @@ body {
   letter-spacing: 0.12em;
 }
 
-.innoshima-intro,
-.innoshima-needs {
+.innoshima-intro {
   padding: clamp(76px, 10vw, 150px) 24px;
   text-align: center;
 }
@@ -97,8 +96,7 @@ body {
   color: #ae987b;
 }
 
-.innoshima-lead,
-.innoshima-message {
+.innoshima-lead {
   color: #666;
   font-size: clamp(16px, 1.4vw, 20px);
   line-height: 2;
@@ -116,43 +114,6 @@ body {
   gap: 30px;
 }
 
-.innoshima-needs {
-  background: #fff;
-}
-
-.innoshima-section-heading h2 {
-  margin: 0 0 48px;
-  color: #5d5852;
-  font-family: "Shippori Mincho", "Yu Mincho", serif;
-  font-size: clamp(28px, 3vw, 44px);
-  font-weight: 500;
-}
-
-.innoshima-needs ul {
-  display: grid;
-  max-width: 900px;
-  margin: 0 auto 54px;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px 28px;
-  text-align: left;
-}
-
-.innoshima-needs li {
-  padding: 18px 22px 18px 48px;
-  border-bottom: 1px solid #e8e1d8;
-  color: #5f5b57;
-  font-size: 16px;
-  line-height: 1.6;
-  position: relative;
-}
-
-.innoshima-needs li::before {
-  position: absolute;
-  left: 18px;
-  color: #ae987b;
-  content: "✓";
-}
-
 @media (max-width: 768px) {
   .innoshima-hero-copy {
     top: 44%;
@@ -161,10 +122,6 @@ body {
 
   .innoshima-hero-copy h2 {
     font-size: 9vw;
-  }
-
-  .innoshima-needs ul {
-    grid-template-columns: 1fr;
   }
 }
 
