@@ -18,10 +18,16 @@ function getReferenceBody() {
 
   const localIntro = `
     <section class="campaign-images" aria-label="サマーキャンペーン">
-      <img src="/campaign/group-summer-campaign.png" alt="グループレッスン サマーキャンペーン。因島オープン記念価格や入会特典のご案内" width="1600" height="986">
-      <img src="/campaign/personal-summer-campaign.png" alt="パーソナルレッスン サマーキャンペーン。体験特典とレッスンプランのご案内" width="1600" height="986" loading="lazy">
+      <header class="campaign-heading">
+        <span>Campaign</span>
+        <h2>キャンペーン</h2>
+      </header>
+      <div class="campaign-visuals">
+        <img src="/campaign/group-summer-campaign.png" alt="グループレッスン サマーキャンペーン。因島オープン記念価格や入会特典のご案内" width="1597" height="985">
+        <img src="/campaign/personal-summer-campaign.png" alt="パーソナルレッスン サマーキャンペーン。体験特典とレッスンプランのご案内" width="1596" height="985" loading="lazy">
+      </div>
       <a class="campaign-reserve-button" href="#about" aria-label="無料体験予約はこちら">
-        <img src="/site-assets/cta-btn.png" alt="カンタン1分で入力完了！無料体験予約はこちら" width="1260" height="389" loading="lazy">
+        <img src="/site-assets/cta-btn.png" alt="カンタン1分で入力完了！無料体験予約はこちら" width="1260" height="402" loading="lazy">
       </a>
     </section>
     <section class="innoshima-intro" aria-labelledby="innoshima-title">
