@@ -214,11 +214,15 @@ body {
 }
 
 .section-concept-v2 .concept-background {
-  background-image: url("/site-assets/top-1-sp.png") !important;
-  background-position: center 35% !important;
+  background-image: url("/images/born-vita-concept.jpg") !important;
+  background-position: center 45% !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   transform: none !important;
+}
+
+.section-concept-v2 .fiximg {
+  display: none !important;
 }
 
 .section-concept-v2 .concept-content {
