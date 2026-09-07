@@ -77,6 +77,33 @@ body {
   box-shadow: 0 18px 55px rgba(73, 151, 174, 0.12);
 }
 
+.campaign-reserve-button {
+  display: block;
+  width: min(78%, 630px);
+  margin: clamp(4px, 1vw, 16px) auto 0;
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.campaign-reserve-button img {
+  width: 100%;
+  box-shadow: none;
+}
+
+.campaign-reserve-button:hover {
+  opacity: 0.88;
+  transform: translateY(-3px);
+}
+
+.campaign-reserve-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .campaign-reserve-button {
+    width: 94%;
+  }
+}
+
 .innoshima-intro {
   background: #faf8f4;
 }

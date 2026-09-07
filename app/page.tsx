@@ -20,6 +20,9 @@ function getReferenceBody() {
     <section class="campaign-images" aria-label="サマーキャンペーン">
       <img src="/campaign/group-summer-campaign.png" alt="グループレッスン サマーキャンペーン。因島オープン記念価格や入会特典のご案内" width="1600" height="986">
       <img src="/campaign/personal-summer-campaign.png" alt="パーソナルレッスン サマーキャンペーン。体験特典とレッスンプランのご案内" width="1600" height="986" loading="lazy">
+      <a class="campaign-reserve-button" href="#about" aria-label="無料体験予約はこちら">
+        <img src="/site-assets/cta-btn.png" alt="カンタン1分で入力完了！無料体験予約はこちら" width="1260" height="389" loading="lazy">
+      </a>
     </section>
     <section class="innoshima-intro" aria-labelledby="innoshima-title">
       <p class="innoshima-brand">INNOSHIMA PILATES</p>
