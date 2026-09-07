@@ -213,6 +213,125 @@ body {
   background-size: cover !important;
 }
 
+/* Keep the imported Pilates section compact and balanced. */
+.section-pilates {
+  min-height: auto !important;
+  padding-bottom: clamp(90px, 10vw, 150px);
+}
+
+.section-pilates .pilates-overlay-top {
+  height: clamp(80px, 9vw, 140px) !important;
+}
+
+.section-pilates .pilates-block-center .pilates-block {
+  width: min(1120px, 88%) !important;
+}
+
+.section-pilates .pilates-block-center .pilates-block .pilates-content {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  align-items: center;
+  margin-top: clamp(64px, 7vw, 100px) !important;
+  gap: clamp(52px, 7vw, 110px);
+}
+
+.section-pilates .pilates-block-center .pilates-block .pilates-content .pilates-content__text,
+.section-pilates .pilates-block .pilates-content .pilates-content__image {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.section-pilates .pilates-content__text__inner {
+  display: flex;
+  width: 100% !important;
+  height: auto !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-pilates .pilates-content__text__inner .text-1 {
+  display: grid;
+  gap: 18px;
+}
+
+.section-pilates .pilates-content__text__inner .text-1 p,
+.section-pilates .pilates-content__text__inner .text-3 p {
+  margin: 0 !important;
+}
+
+.section-pilates .pilates-content__text__inner .text-2 {
+  height: auto !important;
+  margin: 34px 0 30px;
+  padding: 24px !important;
+  border: 1px solid rgba(174, 152, 123, 0.42);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.section-pilates .text-2__background {
+  display: none !important;
+}
+
+.section-pilates .text-2__inner {
+  position: static !important;
+}
+
+.section-pilates .text-2__line {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.section-pilates .text-2__line + .text-2__line {
+  margin-top: 14px;
+}
+
+.section-pilates .text-2__line p {
+  margin: 0 !important;
+}
+
+.section-pilates .pilates-content__text__inner .text-3 {
+  margin-bottom: 40px !important;
+}
+
+.section-pilates .pilates-content__text__inner .action {
+  justify-content: center !important;
+}
+
+.section-pilates .pilates-content__image__inner {
+  width: min(100%, 480px) !important;
+}
+
+@media (max-width: 768px) {
+  .section-pilates {
+    padding-bottom: 80px;
+  }
+
+  .section-pilates .pilates-block-center .pilates-block .pilates-content {
+    display: flex !important;
+    margin-top: 56px !important;
+    flex-direction: column-reverse !important;
+    gap: 54px;
+  }
+
+  .section-pilates .pilates-block-center .pilates-block .pilates-content .pilates-content__text {
+    margin-top: 0 !important;
+  }
+
+  .section-pilates .pilates-content__text__inner .text-1 {
+    gap: 12px;
+  }
+
+  .section-pilates .pilates-content__text__inner .text-2 {
+    margin: 28px 0;
+    padding: 20px 14px !important;
+  }
+
+  .section-pilates .text-2__line {
+    gap: 14px;
+  }
+}
+
 .section-concept-v2 .concept-background {
   background-image: url("/images/born-vita-concept.jpg") !important;
   background-position: center 45% !important;

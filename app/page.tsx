@@ -39,6 +39,9 @@ function getReferenceBody() {
     </section>`;
 
   return cleaned
+    .replaceAll("https://the-silk.co.jp/wp/wp-content/themes/silk-new/assets/img/home/sp/top-2-sp.png", "/images/born-vita-pilates.jpg")
+    .replaceAll("https://the-silk.co.jp/wp/wp-content/themes/silk-new/assets/img/home/pc/top-2.png", "/images/born-vita-pilates.jpg")
+    .replaceAll("/site-assets/top-2.png", "/images/born-vita-pilates.jpg")
     .replace('<section class="about-content">', '<section class="about-content" id="about">')
     .replaceAll("the SILK", "Born vita")
     .replaceAll("INNOSHIMA PILATES", "Born vita")
