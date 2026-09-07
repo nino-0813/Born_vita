@@ -38,6 +38,29 @@ function getReferenceBody() {
       <a class="innoshima-cta" href="#about">はじめての体験レッスン <span>→</span></a>
     </section>`;
 
+  const localClosing = `
+    <!-- LOCATION / SIMPLE FOOTER -->
+    <section class="born-location" id="location" aria-labelledby="born-location-title">
+      <div class="born-location__shade"></div>
+      <div class="born-location__content">
+        <span>PRIVATE PILATES SALON</span>
+        <h2 id="born-location-title">因島ピラティス</h2>
+        <p>家族や仕事を優先してきた女性に、<br>週1回、自分の身体と向き合う時間を。</p>
+      </div>
+    </section>
+    </main>
+    <footer class="born-footer">
+      <p class="born-footer__name">因島ピラティス</p>
+      <div class="born-footer__socials" aria-label="SNS">
+        <span class="born-social" aria-label="Instagram">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="7" width="34" height="34" rx="10"></rect><circle cx="24" cy="24" r="8"></circle><circle cx="34" cy="14" r="2"></circle></svg>
+        </span>
+        <span class="born-social" aria-label="LINE">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M42 22.5c0-9-8.1-16.3-18-16.3S6 13.5 6 22.5c0 8 6.4 14.7 15.1 16l2.9 4.1 3-4.1c8.6-1.3 15-8 15-16Z"></path><text x="24" y="26" text-anchor="middle">LINE</text></svg>
+        </span>
+      </div>
+    </footer>`;
+
   return cleaned
     .replaceAll("https://the-silk.co.jp/wp/wp-content/themes/silk-new/assets/img/home/sp/top-2-sp.png", "/images/born-vita-pilates.jpg")
     .replaceAll("https://the-silk.co.jp/wp/wp-content/themes/silk-new/assets/img/home/pc/top-2.png", "/images/born-vita-pilates.jpg")
@@ -48,6 +71,7 @@ function getReferenceBody() {
     .replaceAll("https://the-silk.co.jp/wp/wp-content/themes/silk-new/assets/img/home/sp/about-03-sp.png", "/images/born-vita-support.jpg")
     .replaceAll("https://the-silk.co.jp/wp/wp-content/themes/silk-new/assets/img/home/pc/about-03-pc.png", "/images/born-vita-support.jpg")
     .replaceAll("/site-assets/about-03-pc.png", "/images/born-vita-support.jpg")
+    .replace(/<!-- SECTION LOCATION -->[\s\S]*?<\/footer>/, localClosing)
     .replace('<section class="about-content">', '<section class="about-content" id="about">')
     .replaceAll("the SILK", "Born vita")
     .replaceAll("INNOSHIMA PILATES", "Born vita")

@@ -340,6 +340,124 @@ body {
   transform: none !important;
 }
 
+.born-location {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  min-height: clamp(560px, 72vw, 820px);
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff;
+  background: #aaa79c url("/images/born-vita-location.jpg") center / cover no-repeat;
+}
+
+.born-location__shade {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(72, 68, 62, 0.28);
+}
+
+.born-location__content {
+  width: min(90%, 760px);
+  padding: 68px 28px;
+  text-align: center;
+  text-shadow: 0 2px 24px rgba(44, 40, 34, 0.25);
+}
+
+.born-location__content span {
+  display: block;
+  margin-bottom: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(13px, 1.1vw, 17px);
+  letter-spacing: 0.3em;
+}
+
+.born-location__content h2 {
+  margin: 0 0 32px;
+  font-family: "Shippori Mincho", "Yu Mincho", serif;
+  font-size: clamp(38px, 5vw, 72px);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.born-location__content p {
+  margin: 0;
+  font-size: clamp(15px, 1.4vw, 20px);
+  line-height: 2.1;
+  letter-spacing: 0.1em;
+}
+
+.born-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 270px;
+  padding: 64px 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #aaa79c;
+}
+
+.born-footer__name {
+  margin: 0 0 32px;
+  font-family: "Shippori Mincho", "Yu Mincho", serif;
+  font-size: clamp(24px, 2.8vw, 40px);
+  letter-spacing: 0.16em;
+}
+
+.born-footer__socials {
+  display: flex;
+  gap: 26px;
+}
+
+.born-social {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+}
+
+.born-social svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+}
+
+.born-social text {
+  fill: currentColor;
+  stroke: none;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .born-location {
+    min-height: 600px;
+    background-position: center;
+  }
+
+  .born-location__content {
+    padding: 48px 18px;
+  }
+
+  .born-location__content h2 {
+    margin-bottom: 26px;
+    font-size: 9vw;
+  }
+
+  .born-footer {
+    min-height: 230px;
+  }
+}
+
 .section-about .about-block:nth-of-type(2) .block__image img {
   display: block;
   width: 100% !important;
