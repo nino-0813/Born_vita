@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('YuGothic-Bold.eot');
+    src: url('YuGothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('YuGothic-Bold.woff2') format('woff2'),
+        url('YuGothic-Bold.woff') format('woff'),
+        url('YuGothic-Bold.ttf') format('truetype'),
+        url('YuGothic-Bold.svg#YuGothic-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('YuGo-Medium-AlphaNum.eot');
+    src: url('YuGo-Medium-AlphaNum.eot?#iefix') format('embedded-opentype'),
+        url('YuGo-Medium-AlphaNum.woff2') format('woff2'),
+        url('YuGo-Medium-AlphaNum.woff') format('woff'),
+        url('YuGo-Medium-AlphaNum.ttf') format('truetype'),
+        url('YuGo-Medium-AlphaNum.svg#YuGo-Medium-AlphaNum') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('YuGothic.woff2') format('woff2'),
+        url('YuGothic.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('FuturaCyrillicBook.woff2') format('woff2'),
+        url('FuturaCyrillicBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FreightBigProBook';
+    src: url('FreightBigProBook-Regular.woff2') format('woff2'),
+        url('FreightBigProBook-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigProMedium-Regular.woff2') format('woff2'),
+        url('FreightBigProMedium-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
