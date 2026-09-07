@@ -17,6 +17,10 @@ function getReferenceBody() {
     .replace(/href="https:\/\/the-silk\.co\.jp\/[^\"]*"/g, 'href="#"');
 
   const localIntro = `
+    <section class="campaign-images" aria-label="サマーキャンペーン">
+      <img src="/campaign/group-summer-campaign.png" alt="グループレッスン サマーキャンペーン。因島オープン記念価格や入会特典のご案内" width="1600" height="986">
+      <img src="/campaign/personal-summer-campaign.png" alt="パーソナルレッスン サマーキャンペーン。体験特典とレッスンプランのご案内" width="1600" height="986" loading="lazy">
+    </section>
     <section class="innoshima-intro" aria-labelledby="innoshima-title">
       <p class="innoshima-brand">INNOSHIMA PILATES</p>
       <h1 id="innoshima-title">何歳からでも、<br><span>身体は整え直せる。</span></h1>
