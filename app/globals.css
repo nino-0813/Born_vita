@@ -15,6 +15,29 @@ body {
   overflow-x: hidden;
 }
 
+.header-logo svg,
+.footer-logo svg {
+  display: none !important;
+}
+
+.header-logo::after,
+.footer-logo::after {
+  display: block;
+  color: #666;
+  content: "Born vita";
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.footer-logo::after {
+  font-size: 42px;
+}
+
 .fv-campaign-bnr,
 .hero-content-v2,
 .only-now,

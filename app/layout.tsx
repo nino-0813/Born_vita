@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "因島の女性のための少人数ピラティス｜INNOSHIMA PILATES",
+  title: "因島の女性のための少人数ピラティス｜Born vita",
   description:
     "肩こり・腰痛・姿勢の悩みに寄り添う、因島の女性のための少人数ピラティス。何歳からでも、身体は整え直せます。",
 };

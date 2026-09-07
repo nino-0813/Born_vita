@@ -32,7 +32,7 @@ function getReferenceBody() {
       </a>
     </section>
     <section class="innoshima-intro" aria-labelledby="innoshima-title">
-      <p class="innoshima-brand">INNOSHIMA PILATES</p>
+      <p class="innoshima-brand">Born vita</p>
       <h1 id="innoshima-title">何歳からでも、<br><span>身体は整え直せる。</span></h1>
       <p class="innoshima-lead">肩こり・腰痛・姿勢の悩みに寄り添う、<br>因島の女性のための少人数ピラティス。</p>
       <a class="innoshima-cta" href="#about">はじめての体験レッスン <span>→</span></a>
@@ -40,7 +40,9 @@ function getReferenceBody() {
 
   return cleaned
     .replace('<section class="about-content">', '<section class="about-content" id="about">')
-    .replace(/(<div class="hero"[^>]*>)/, `$1<div class="innoshima-hero-copy"><p>INNOSHIMA PILATES</p><h2>何歳からでも、<br>身体は整え直せる。</h2><span>因島の女性のための少人数ピラティス</span></div>`)
+    .replaceAll("the SILK", "Born vita")
+    .replaceAll("INNOSHIMA PILATES", "Born vita")
+    .replace(/(<div class="hero"[^>]*>)/, `$1<div class="innoshima-hero-copy"><p>Born vita</p><h2>何歳からでも、<br>身体は整え直せる。</h2><span>因島の女性のための少人数ピラティス</span></div>`)
     .replace(/(<\/section>\s*<!-- 20260713 キャンペーンブロック -->)/, `$1${localIntro}`)
     .replaceAll("しなやかに生きる", "自分の身体と向き合う")
     .replace("「しなやかに生きる」", "「週1回、自分のための時間を」")
