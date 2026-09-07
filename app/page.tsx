@@ -50,14 +50,16 @@ function getReferenceBody() {
     </section>
     </main>
     <footer class="born-footer">
-      <p class="born-footer__name">因島ピラティス</p>
-      <div class="born-footer__socials" aria-label="SNS">
-        <span class="born-social" aria-label="Instagram">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="7" width="34" height="34" rx="10"></rect><circle cx="24" cy="24" r="8"></circle><circle cx="34" cy="14" r="2"></circle></svg>
-        </span>
-        <span class="born-social" aria-label="LINE">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M42 22.5c0-9-8.1-16.3-18-16.3S6 13.5 6 22.5c0 8 6.4 14.7 15.1 16l2.9 4.1 3-4.1c8.6-1.3 15-8 15-16Z"></path><text x="24" y="26" text-anchor="middle">LINE</text></svg>
-        </span>
+      <div class="born-footer__content">
+        <p class="born-footer__name">因島ピラティス</p>
+        <div class="born-footer__socials" aria-label="SNS">
+          <span class="born-social" aria-label="Instagram">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="7" width="34" height="34" rx="10"></rect><circle cx="24" cy="24" r="8"></circle><circle cx="34" cy="14" r="2"></circle></svg>
+          </span>
+          <span class="born-social" aria-label="LINE">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M42 22.5c0-9-8.1-16.3-18-16.3S6 13.5 6 22.5c0 8 6.4 14.7 15.1 16l2.9 4.1 3-4.1c8.6-1.3 15-8 15-16Z"></path><text x="24" y="26" text-anchor="middle">LINE</text></svg>
+          </span>
+        </div>
       </div>
     </footer>`;
 

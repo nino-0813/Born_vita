@@ -391,26 +391,40 @@ body {
 
 .born-footer {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
-  min-height: 270px;
-  padding: 64px 24px;
-  flex-direction: column;
+  min-height: clamp(420px, 42vw, 620px);
+  margin-top: clamp(-120px, -8vw, -72px);
+  padding: clamp(150px, 15vw, 220px) 8vw 80px;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  background: #aaa79c;
+  justify-content: flex-end;
+  overflow: hidden;
+  color: #ae987b;
+  background-color: #faf9f7;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)),
+    url("/site-assets/bg-ft.png");
+  background-position: center;
+  background-size: cover;
+  clip-path: ellipse(112% 100% at 58% 100%);
+}
+
+.born-footer__content {
+  width: min(100%, 560px);
+  text-align: center;
 }
 
 .born-footer__name {
   margin: 0 0 32px;
   font-family: "Shippori Mincho", "Yu Mincho", serif;
   font-size: clamp(24px, 2.8vw, 40px);
+  font-weight: 400;
   letter-spacing: 0.16em;
 }
 
 .born-footer__socials {
   display: flex;
+  justify-content: center;
   gap: 26px;
 }
 
@@ -454,7 +468,11 @@ body {
   }
 
   .born-footer {
-    min-height: 230px;
+    min-height: 380px;
+    margin-top: -72px;
+    padding: 142px 24px 58px;
+    justify-content: center;
+    clip-path: ellipse(155% 100% at 62% 100%);
   }
 }
 
