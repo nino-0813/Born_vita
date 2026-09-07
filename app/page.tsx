@@ -13,6 +13,7 @@ function getReferenceBody() {
     .replace(/<iframe\b[^>]*>[\s\S]*?<\/iframe>/gi, "")
     .replace(/<noscript\b[^>]*>[\s\S]*?<\/noscript>/gi, "")
     .replace(/\s(?:onclick|onload|onerror)=(?:"[^"]*"|'[^']*')/gi, "")
+    .replaceAll('style="position: fixed;"', "")
     .replace(/href="https:\/\/the-silk\.co\.jp\/?"/g, 'href="#top"')
     .replace(/href="https:\/\/the-silk\.co\.jp\/[^\"]*"/g, 'href="#"');
 

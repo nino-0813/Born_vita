@@ -22,6 +22,25 @@ body {
   display: none !important;
 }
 
+.section-top {
+  position: relative;
+  z-index: 1;
+  overflow: clip;
+  isolation: isolate;
+  contain: paint;
+}
+
+.campaign-images,
+.innoshima-intro,
+.section-concept-v2,
+.section-pilates,
+.section-about,
+.section-location {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+}
+
 .innoshima-hero-copy {
   position: absolute;
   z-index: 3;
@@ -171,6 +190,22 @@ body {
   background-size: cover !important;
 }
 
+.section-concept-v2 .concept-background {
+  background-image: url("/site-assets/top-1-sp.png") !important;
+  background-position: center 35% !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  transform: none !important;
+}
+
+.section-concept-v2 .concept-content {
+  min-height: 100vh;
+}
+
+.section-concept-v2 .concept-text {
+  background: rgba(255, 255, 255, 0.96);
+}
+
 .innoshima-intro h1 {
   margin: 0 auto 28px;
   color: #5d5852;
@@ -212,6 +247,15 @@ body {
 
   .innoshima-hero-copy h2 {
     font-size: 9vw;
+  }
+
+  .section-concept-v2 .concept-content {
+    min-height: auto;
+  }
+
+  .section-concept-v2 .concept-background {
+    min-height: 62vh;
+    margin-top: 0;
   }
 }
 

@@ -88,7 +88,12 @@ export default function SiteMotion() {
     const motion = gsap.context(() => {
       const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
       heroTimeline
-        .from(".hero", { autoAlpha: 0, scale: 1.04, duration: 1.15 })
+        .from(".hero-bg", {
+          autoAlpha: 0,
+          scale: 1.04,
+          duration: 1.15,
+          clearProps: "transform,opacity,visibility",
+        })
         .from(".innoshima-hero-copy p", { autoAlpha: 0, y: 18, duration: 0.45 }, "-=0.45")
         .from(
           ".innoshima-hero-copy h2",
@@ -205,16 +210,6 @@ export default function SiteMotion() {
 
       const desktopMotion = gsap.matchMedia();
       desktopMotion.add("(min-width: 769px)", () => {
-        gsap.to(".concept-background", {
-          yPercent: 8,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".section-concept-v2",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.8,
-          },
-        });
         gsap.to(".section-location .location-overlay", {
           scale: 1.07,
           ease: "none",
