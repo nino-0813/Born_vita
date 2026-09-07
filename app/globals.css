@@ -340,6 +340,21 @@ body {
   transform: none !important;
 }
 
+.section-about .about-block:nth-of-type(2) .block__image img {
+  display: block;
+  width: 100% !important;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+@media (max-width: 768px) {
+  .section-about .about-block:nth-of-type(2) .block__image img {
+    aspect-ratio: 4 / 5;
+    object-position: center 54%;
+  }
+}
+
 .section-concept-v2 .fiximg {
   display: none !important;
 }
