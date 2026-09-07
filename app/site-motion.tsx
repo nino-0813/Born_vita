@@ -85,30 +85,152 @@ export default function SiteMotion() {
 
     if (reduceMotion) return () => cleanups.forEach((fn) => fn());
 
-    const hero = root.querySelector<HTMLElement>(".fv, .hero, [class*='first-view']");
-    if (hero) {
-      gsap.from(hero, { autoAlpha: 0, duration: 0.9, ease: "power2.out", clearProps: "all" });
-    }
+    const motion = gsap.context(() => {
+      const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+      heroTimeline
+        .from(".hero", { autoAlpha: 0, scale: 1.04, duration: 1.15 })
+        .from(".innoshima-hero-copy p", { autoAlpha: 0, y: 18, duration: 0.45 }, "-=0.45")
+        .from(
+          ".innoshima-hero-copy h2",
+          { autoAlpha: 0, y: 32, clipPath: "inset(0 0 100% 0)", duration: 0.85 },
+          "-=0.25",
+        )
+        .from(".innoshima-hero-copy span", { autoAlpha: 0, y: 16, duration: 0.5 }, "-=0.35");
 
-    const sections = gsap.utils.toArray<HTMLElement>(
-      ".reference-site main > section, .reference-site main > div > section",
-    );
-    sections.slice(0, 18).forEach((section) => {
-      gsap.from(
-        section,
-        {
+      const campaignTimeline = gsap.timeline({
+        scrollTrigger: { trigger: ".campaign-images", start: "top 82%", once: true },
+      });
+      campaignTimeline
+        .from(".campaign-heading span", {
           autoAlpha: 0,
-          y: 36,
-          duration: 0.75,
+          y: 16,
+          letterSpacing: "0.34em",
+          duration: 0.65,
           ease: "power2.out",
-          clearProps: "all",
-          scrollTrigger: { trigger: section, start: "top 88%", once: true },
-        },
-      );
-    });
+        })
+        .from(".campaign-heading h2", { autoAlpha: 0, y: 10, duration: 0.4 }, "-=0.3")
+        .from(
+          ".campaign-visuals img",
+          {
+            autoAlpha: 0,
+            y: 46,
+            scale: 0.985,
+            clipPath: "inset(10% 0 10% 0 round 4px)",
+            stagger: 0.18,
+            duration: 0.9,
+            ease: "power3.out",
+          },
+          "-=0.1",
+        )
+        .from(
+          ".campaign-reserve-button",
+          {
+            autoAlpha: 0,
+            y: 24,
+            scale: 0.96,
+            duration: 0.65,
+            ease: "back.out(1.5)",
+            clearProps: "transform,opacity,visibility",
+          },
+          "-=0.3",
+        );
+
+      const introTimeline = gsap.timeline({
+        scrollTrigger: { trigger: ".innoshima-intro", start: "top 78%", once: true },
+      });
+      introTimeline
+        .from(".innoshima-brand", { autoAlpha: 0, y: 14, duration: 0.45 })
+        .from(
+          ".innoshima-intro h1",
+          { autoAlpha: 0, y: 30, clipPath: "inset(0 0 100% 0)", duration: 0.8, ease: "power3.out" },
+          "-=0.2",
+        )
+        .from(".innoshima-lead", { autoAlpha: 0, y: 20, duration: 0.55 }, "-=0.3")
+        .from(".innoshima-cta", { autoAlpha: 0, y: 16, duration: 0.45 }, "-=0.2");
+
+      gsap.from(".concept-text-center", {
+        autoAlpha: 0,
+        x: 42,
+        duration: 0.9,
+        ease: "power3.out",
+        scrollTrigger: { trigger: ".section-concept-v2", start: "top 72%", once: true },
+      });
+
+      gsap.from(".pilates-header, .pilates-content__text", {
+        autoAlpha: 0,
+        x: -40,
+        stagger: 0.16,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: { trigger: ".section-pilates", start: "top 76%", once: true },
+      });
+      gsap.from(".pilates-content__image", {
+        autoAlpha: 0,
+        x: 54,
+        clipPath: "inset(0 0 0 100% round 50%)",
+        duration: 1,
+        ease: "power3.inOut",
+        scrollTrigger: { trigger: ".pilates-content", start: "top 78%", once: true },
+      });
+
+      gsap.utils.toArray<HTMLElement>(".about-block").forEach((block, index) => {
+        const image = block.querySelector(".block__image");
+        const copy = block.querySelector(".block__text");
+        const direction = index % 2 === 0 ? -1 : 1;
+        const timeline = gsap.timeline({
+          scrollTrigger: { trigger: block, start: "top 80%", once: true },
+        });
+        if (image) {
+          timeline.from(image, {
+            autoAlpha: 0,
+            x: 54 * direction,
+            clipPath: direction < 0 ? "inset(0 100% 0 0)" : "inset(0 0 0 100%)",
+            duration: 0.9,
+            ease: "power3.inOut",
+          });
+        }
+        if (copy) {
+          timeline.from(copy, { autoAlpha: 0, x: -28 * direction, duration: 0.65 }, "-=0.42");
+        }
+      });
+
+      gsap.from(".location-content__inner > *", {
+        autoAlpha: 0,
+        y: 24,
+        stagger: 0.1,
+        duration: 0.65,
+        ease: "power2.out",
+        scrollTrigger: { trigger: ".section-location", start: "top 72%", once: true },
+      });
+
+      const desktopMotion = gsap.matchMedia();
+      desktopMotion.add("(min-width: 769px)", () => {
+        gsap.to(".concept-background", {
+          yPercent: 8,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".section-concept-v2",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.8,
+          },
+        });
+        gsap.to(".section-location .location-overlay", {
+          scale: 1.07,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".section-location",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.8,
+          },
+        });
+      });
+    }, root);
 
     return () => {
       cleanups.forEach((fn) => fn());
+      motion.revert();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
